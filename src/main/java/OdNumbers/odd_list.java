@@ -13,7 +13,8 @@ public class odd_list {
         numbers.stream().filter( i -> i %2 != 0 ).distinct().forEach(i -> System.out.print(" " + i));
         //List<Integer> oddNumbers;
 
-
+//The even numbers in the list:  2 4 8 0 6
+// The odd numbers in the list:  1 3 5 7 9
         
 
     }

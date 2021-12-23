@@ -1,0 +1,24 @@
+{
+
+  "type": "object",
+  "properties": {
+    "error": {
+      "type": "object",
+      "properties": {
+        ".tag": {
+          "type": "string"
+        }
+      },
+      "required": [
+        ".tag"
+      ]
+    },
+    "error_summary": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "error",
+    "error_summary"
+  ]
+}
