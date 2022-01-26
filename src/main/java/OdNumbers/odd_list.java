@@ -14,7 +14,7 @@ public class odd_list {
         //List<Integer> oddNumbers;
 
 //The even numbers in the list:  2 4 8 0 6
-// The odd numbers in the list:  1 3 5 7 9
+// The odd numbers  in the list:  1 3 5 7 9
         
 
     }
