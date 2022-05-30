@@ -14,7 +14,7 @@ package MeetPractise;//Задание 1 "Meet an Agent"
 
 import java.util.Scanner;
 
-public class PractiseMdul3_1 {
+public class PractiseMdul3_1_MeetAnAgent {
     public static void main(String[] args) {
         final int password = 133976;
         Scanner scanner=new Scanner(System.in);

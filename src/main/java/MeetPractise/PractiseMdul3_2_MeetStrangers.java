@@ -25,7 +25,7 @@ package MeetPractise;
 
 import java.util.Scanner;
 
-public class PractiseMdul3_2 {
+public class PractiseMdul3_2_MeetStrangers {
     public static void main(String[] args) {
 
         System.out.print("Введите количество незнакомцев,"+"\n"+ "с которыми нужно встретиться :");
