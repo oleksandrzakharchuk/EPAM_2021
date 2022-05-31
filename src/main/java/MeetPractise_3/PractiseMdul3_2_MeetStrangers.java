@@ -1,4 +1,4 @@
-package MeetPractise;
+package MeetPractise_3;
 //Задание 2 "Meet Strangers"
 //Описание
 //Перейдите в класс HelloStrangers и напишите простую программу, которая:

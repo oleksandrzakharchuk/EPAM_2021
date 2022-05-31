@@ -1,4 +1,4 @@
-package MeetPractise;
+package MeetPractise_3;
 //Перейдите в класс QuadraticEquation и напишите программу для решения квадратных уравнений.
 //
 //Для заданных коэффициентов квадратного уравнения (ax² + bx + c = 0), верните один или два корня уравнения, если они существуют в области действительных чисел.
@@ -27,11 +27,9 @@ import java.util.Scanner;
 
 public class PractiseMdul3_7_QuadraticEquation {
     public static void main(String[] args) {
-
-
 //Будем решать его через дискриминант. Для получения корней уравнения необходимо выполнить следующий алгоритм:
 //
-//Вычислим дискриминант по формуле: Формула дискриминанта D= b * b - 4*a*c;
+//Вычислим дискриминант по формуле: Формула дискриминанта D= b * b - 4 * a * c;
 
 //ЕСЛИ дискриминант больше нуля, то вычислим корни уравнения x1 и x2 по формуле:
         //x1,2 = -b+- sqrt D/2*a;
@@ -43,15 +41,12 @@ public class PractiseMdul3_7_QuadraticEquation {
         double a, b, c;
         double D;
 
-
         System.out.println("Программа решает квадратное уравнение вида:");
         System.out.println("ax^2 + bx + c = 0");
         System.out.println("Введите a, b и c:");
         //  Создадим новый объект класса Scanner, он необходим для ввода данных в программу. Инициализируем этот объект класса входным потоком:
 
         Scanner in = new Scanner(System.in);
-
-
         a = in.nextDouble();
         b = in.nextDouble();
         c = in.nextDouble();
