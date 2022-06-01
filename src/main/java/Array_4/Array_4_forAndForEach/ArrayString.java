@@ -1,4 +1,4 @@
-package Array_4_forAndForEach;
+package Array_4.Array_4_forAndForEach;
 
 public class ArrayString {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Array_4_forAndForEach;
+package Array_4.Array_4_forAndForEach;
 //Задача: необходимо найти максимальное значение в массиве и заменить отрицательные элементы этого массива на него.
 
 public class Array_Max {
