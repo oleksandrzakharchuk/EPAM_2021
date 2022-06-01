@@ -1,4 +1,4 @@
-package Array_4_ToothedArrays;
+package Array_4.Array_4_ToothedArrays;
 
 public class Ex2Array {
     public static void main(String[] args) {
