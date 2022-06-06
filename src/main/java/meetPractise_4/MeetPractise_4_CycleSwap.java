@@ -59,13 +59,13 @@ public class MeetPractise_4_CycleSwap {
 
 
         List<Integer> list = Arrays.asList(1, 3, 2, 7, 4);
-        System.out.println("List before swapping: " + list);//List before swapping: [1, 3, 2, 7, 4]
+        System.out.println("\n List before swapping: " + list);//List before swapping: [1, 3, 2, 7, 4]
         Collections.swap(list, 0, 4);
         Collections.swap(list, 1, 4);
         Collections.swap(list, 2, 4);
         Collections.swap(list, 3, 4);
 
-        System.out.println("List after swapping: " + list);//List after swapping: [4, 1, 3, 2, 7]
+        System.out.println(" List after swapping:  " + list);//List after swapping: [4, 1, 3, 2, 7]
     }
 }
 
