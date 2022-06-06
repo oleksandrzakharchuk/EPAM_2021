@@ -21,7 +21,7 @@ public class MethodDeepToStringAndDeepEquals {
 
        int[][] array5 = { { 1, 2, 3 }, { 4, 5, 6 }, { 7 } };
        int[][] anotherArray = { { 1, 2, 3 }, { 4, 5, 6 }, { 7 } };
-       System.out.println(Arrays.equals(array5, anotherArray));//false метод equals нельзя использовать с многомерными массивами
-       System.out.println(Arrays.deepEquals(array5, anotherArray));//true метод deepEquals можно использовать с многомерными массивами
+       System.out.println(Arrays.equals(array5, anotherArray));//false, метод equals нельзя использовать с многомерными массивами
+       System.out.println(Arrays.deepEquals(array5, anotherArray));//true, метод deepEquals можно использовать с многомерными массивами
    }
 }
