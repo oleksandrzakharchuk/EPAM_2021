@@ -39,3 +39,4 @@ public class MeetPractise_4_SumOfPrevious {
     }
 }
 
+/*[false, false, true, false, false, true, false, true]*/

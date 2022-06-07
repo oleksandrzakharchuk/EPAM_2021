@@ -17,26 +17,26 @@ import java.util.Scanner;
 public class PractiseMdul3_6_PizzaSplit {
     public static void main(String[] args) {
 
-                Scanner scnr = new Scanner (System.in);
-// у каждой пиццы 8 кусочков
-                int slicesPerPizza = 8;
+        Scanner scnr = new Scanner(System.in);
+// each pizza has 8 pieces
+        int slicesPerPizza = 8;
 
-// Собираем первое число у пользователя.
-                System.out.print("Введите общее количество людей: ");
-                int numberOfPeople = scnr.nextInt();
-// Собираем второе число у пользователя.
-                System.out.print("Введите количество кусочков, которое получит каждый человек: ");
-                double slicesPerPerson = scnr.nextDouble();
+// Collect the first number from the user.
+        System.out.print("Enter the total number of people : ");
+        int numberOfPeople = scnr.nextInt();
+// Collect the second number from the user.
+        System.out.print("Enter the number of pieces each person will receive: ");
+        double slicesPerPerson = scnr.nextDouble();
 
-// Ниже вычислите количество пицц для заказа
-// сохраните результат в переменной типа int с именем numberOfPizzas.
-                int numberOfPizzas=  (int)Math.ceil(((numberOfPeople*slicesPerPerson)/slicesPerPizza));
-// Ниже напишите оператор Java для отображения количества заказанных пицц.
-                System.out.println("Количество пицц на заказ:"+numberOfPizzas);
-            }
+// Below we calculate the number of pizzas for the order and
+//save the result in a variable of type int named numberOfPizzas.
+        int numberOfPizzas = (int) Math.ceil(((numberOfPeople * slicesPerPerson) / slicesPerPizza));
 
-        }
+        System.out.println("Number of pizzas to order : " + numberOfPizzas);
+    }
 
-//Введите общее количество людей: 12
-//Введите количество кусочков, которое получит каждый человек: 2
-//Количество пицц на заказ:3
+}
+
+/*Enter the total number of people : 12
+Enter the number of pieces each person will receive: 2
+Number of pizzas to order : 3*/

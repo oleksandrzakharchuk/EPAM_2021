@@ -14,6 +14,7 @@ public class MeetPractice_4_MaxMethod_1 {
     //Входной массив гарантированно не будет пустым или null.
     //Метод max не должен изменять массив.
     //Входной массив может содержать любое значение типа int от Integer.MIN_VALUE до Integer.MAX_VALUE.
+
     public static void main(String[] args) {
         int[] vals1 = new int[]{ -2, 0, 10, 5 };
         Arrays.sort(vals1);
@@ -29,3 +30,6 @@ public class MeetPractice_4_MaxMethod_1 {
        // System.out.println(result == 10);
     }
 }
+/*[-2, 0, 5, 10]
+MIN_VALUE: -2
+MAX_VALUE: 10*/

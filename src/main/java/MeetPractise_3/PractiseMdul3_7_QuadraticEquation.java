@@ -27,31 +27,31 @@ import java.util.Scanner;
 
 public class PractiseMdul3_7_QuadraticEquation {
     public static void main(String[] args) {
-//Будем решать его через дискриминант. Для получения корней уравнения необходимо выполнить следующий алгоритм:
-//
-//Вычислим дискриминант по формуле: Формула дискриминанта D= b * b - 4 * a * c;
+//We will solve it through a discriminator. To obtain the roots of the equation, the following algorithm must be performed:
 
-//ЕСЛИ дискриминант больше нуля, то вычислим корни уравнения x1 и x2 по формуле:
-        //x1,2 = -b+- sqrt D/2*a;
+//Let's calculate the discriminant by the formula: Discriminant formula D= b * b - 4 * a * c;
 
-        // ЕСЛИ дискриминант равен нулю, значит уравнение имеет единственный корень. Вычислим его по формуле: x = -b/2*a;
+//IF the discriminant is greater than zero, then calculate the roots of the equation x1 and x2 by the formula: x1,2 = -b+- sqrt D/2*a;
 
-        //(то есть дискриминант меньше нуля) уравнение не имеет действительных корней.
+        // IF the discriminant is zero, then the equation has a single root. Let's calculate it by the formula: x = -b/2*a;
+
+        //(that is, the discriminant is less than zero) the equation has no real roots.
 
         double a, b, c;
         double D;
 
-        System.out.println("Программа решает квадратное уравнение вида:");
+        System.out.println("The program solves a quadratic equation of the form:");
         System.out.println("ax^2 + bx + c = 0");
-        System.out.println("Введите a, b и c:");
-        //  Создадим новый объект класса Scanner, он необходим для ввода данных в программу. Инициализируем этот объект класса входным потоком:
+        System.out.println("Enter a, b и c:");
+
+        //  Let's create a new object of the Scanner class, it is necessary for entering data into the program. Initialize this class object with the input stream:
 
         Scanner in = new Scanner(System.in);
         a = in.nextDouble();
         b = in.nextDouble();
         c = in.nextDouble();
 
-        //Реализуем алгоритм решения квадратного уравнения
+        //We implement an algorithm for solving a quadratic equation
 
         D = b * b - 4 * a * c;
 
@@ -59,14 +59,31 @@ public class PractiseMdul3_7_QuadraticEquation {
             double x1, x2;
             x1 = (-b - Math.sqrt(D)) / (2 * a);
             x2 = (-b + Math.sqrt(D)) / (2 * a);
-            System.out.println("Корни уравнения: x1 = " + x1 + ", x2 = " + x2);
+            System.out.println("Roots of the equation: x1 = " + x1 + ", x2 = " + x2);
         } else if (D == 0) {
             double x;
             x = -b / (2 * a);
-            System.out.println("Уравнение имеет единственный корень: x = " + x);
+            System.out.println("The equation has a single root: x = " + x);
         } else {
-            System.out.println("Уравнение не имеет действительных корней!");
+            System.out.println("The equation has no real roots!");
         }
     }
 }
 
+/*The program solves a quadratic equation of the form:
+ax^2 + bx + c = 0
+Enter a, b и c: 1 -2  1
+The equation has a single root: x = 1.0
+
+The program solves a quadratic equation of the form:
+ax^2 + bx + c = 0
+Enter a, b и c:
+ 2 5 -3
+Roots of the equation: x1 = -3.0, x2 = 0.5
+
+The program solves a quadratic equation of the form:
+ax^2 + bx + c = 0
+Enter a, b и c:
+2 2 2
+The equation has no real roots!
+*/

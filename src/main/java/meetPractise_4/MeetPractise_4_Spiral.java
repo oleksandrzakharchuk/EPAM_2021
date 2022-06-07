@@ -102,7 +102,7 @@ import java.util.Arrays;
 //
 //13  12  11  10   9
 public class MeetPractise_4_Spiral {
-    /*заводим переменные для верхней/нижней строки и правого/левого столбца и реализуем четыре цикла для прохождения по спирали вправо/вниз/влево/вверх, пока не будет достигнуто максимальное значение rows * cols:*/
+    /*set the variables for the top/bottom row and right/left column and implement four cycles to spiral right/down/left/up until the maximum rows * cols value is reached:*/
     public static int[][] spiral(int rows, int cols) {
         int[][] arr = new int[rows][cols];
 
@@ -113,22 +113,22 @@ public class MeetPractise_4_Spiral {
         int cmin = 0, cmax = cols - 1;
 
         while (num <= max) {
-            // проход влево по верхней строке, инкремент столбцов
+            // left pass through the top row, column increment:
             for (int i = cmin; num <= max && i <= cmax; i++) {
                 arr[rmin][i] = num++;
             }
             rmin++;
-            // проход вниз по правому краю, инкремент строк
+            // right pass, increment of lines
             for (int i = rmin; num <= max && i <= rmax; i++) {
                 arr[i][cmax] = num++;
             }
             cmax--;
-            // проход вправо по нижней строке, декремент столбцов
+            // right pass through the bottom row, decrement of columns
             for (int i = cmax; num <= max && i >= cmin; i--) {
                 arr[rmax][i] = num++;
             }
             rmax--;
-            // проход вверх по левому краю, декремент строк
+            // move up left, decrement of lines
             for (int i = rmax; num <= max && i >= rmin; i--) {
                 arr[i][cmin] = num++;
             }
@@ -157,6 +157,10 @@ public class MeetPractise_4_Spiral {
     }
 
 
-
+/* -- 3 x 4 --
+     [1, 2, 3]
+     [10, 11, 4]
+     [9, 12, 5]
+     [8, 7, 6]   */
 
 

@@ -49,3 +49,12 @@ public class PractiseMdul3_6_Average {
 
     }
 }
+/*Enter the number:
+1 2 3 4 5 0
+The number of positives is 5.0
+The number of negatives is 0.0
+The total is 15.0
+The count is 6
+The average is 2.5
+The round average is 3
+*/

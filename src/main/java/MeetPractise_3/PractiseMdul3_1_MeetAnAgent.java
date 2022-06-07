@@ -15,17 +15,22 @@ package MeetPractise_3;//Задание 1 "Meet an Agent"
 import java.util.Scanner;
 
 public class PractiseMdul3_1_MeetAnAgent {
-    public static void main(String[] args) {
-        final int password = 133976;
-        Scanner scanner=new Scanner(System.in);
-        int pass = Integer.parseInt(scanner.nextLine());
-        do {
-            if (password == password) {
-                break;
-            }
-            System.out.println("Hello, Agent");
-        } while (password != password);
-        System.out.println("Access denied");
 
+    final static int PASSWORD = 133976;
+
+    public static void main(String[] args) {
+        System.out.print("\nEnter Your Password: ");
+        Scanner input = new Scanner(System.in);
+        int inputPass = input.nextInt();
+
+        if (!(inputPass == PASSWORD)) {
+            System.out.println("\nAccess denied");
+        } else {
+            System.out.println("\nHello, Agent!");
+        }
     }
 }
+
+
+/*Enter Your Password: 711  Access denied*/
+/*Enter Your Password: 133976 Hello, Agent!*/

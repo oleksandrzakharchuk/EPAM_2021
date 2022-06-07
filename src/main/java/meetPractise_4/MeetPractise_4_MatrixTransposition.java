@@ -30,38 +30,38 @@ package meetPractise_4;
 public class MeetPractise_4_MatrixTransposition {
     public static void main(String[] args) {
 
-        // часть 1 - создаем матрицу n на n и заполняем ее значениями с помошью цикла.
+        // part 1 - create a matrix n by n and fill it with values with the help of the cycle.
         int n = 3;
         int[][] a = new int[n][n];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                a[i][j] = n*i + j;//выражение " a[i][j] = n*i + j " просто заполняет массив по порядку числами , начиная с 0.
+                a[i][j] = n*i + j;//the expression " a[i][j] = n*i + j " simply fills the array in order with numbers starting with 0.
             }
         }
 
-        // часть 2 - выводит на экран начальную матрицу
-        System.out.println("Начальная матрица");
+        // part 2 - displays the initial matrix
+        System.out.println("Initial matrix");
         System.out.println("------");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                System.out.printf("%4d", a[i][j]);//выводит на экран двухмерную матрицу с помощью двух массивов. "%4d" значит "4 пробела". Так, "%3d" - это 3 пробела,  "%6d" - 6 пробелов, и т.д.
+                System.out.printf("%4d", a[i][j]);//displays a two-dimensional matrix using two arrays. "%4d" means "4 spaces". So, "%3d" is 3 spaces, "%6d" is 6 spaces, etc..
             }
             System.out.println();
         }
 
-        // часть 3 - транспонирование матрицы Это "переворачивание" матрицы:
+        // Part 3 - Transposing the Matrix This is the "flipping" of the matrix:
         for (int i = 0; i < n; i++) {
             for (int j = i+1; j < n; j++) {
                 int temp = a[i][j];
-                a[i][j] = a[j][i];//a[i][j] и a[j][i] меняются местами с помощью переменной temp (temporary - временный).
+                a[i][j] = a[j][i];//a[i][j] и a[j][i] are swapped using a variable tempo (temp - temporary).
                 a[j][i] = temp;
 
             }
         }
 
-        // часть 4 - выводит на экран транспонированную матрицу во время транспонирования номер столбца и номер строки "меняются местами". Например, было a[1] [9], стало a[9][1]. И так со всеми элементами (a[2] [2], конечно, остается a[2][2]).
+        // part 4 - displays the transposed matrix during transposition, the column number and the row number are "swapped". For example, it was a[1] [9], became a[9][1]. And so with all the elements (a[2] [2], of course, remains a[2][2])..
         System.out.println();
-        System.out.println("Новая матрица");
+        System.out.println("New matrix");
         System.out.println("------");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -73,15 +73,16 @@ public class MeetPractise_4_MatrixTransposition {
     }
 }
 
-/*Начальная матрица
+/*Initial matrix
 ------
    0   1   2
    3   4   5
    6   7   8
 
-Новая матрица
+New matrix
 ------
   0  3  6
   1  4  7
   2  5  8
+
 */

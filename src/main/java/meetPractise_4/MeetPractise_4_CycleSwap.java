@@ -70,7 +70,12 @@ public class MeetPractise_4_CycleSwap {
 }
 
 
-
+/*Original array:
+1 3 2 7 4
+Array after right rotation:
+4 1 3 2 7
+ List before swapping: [1, 3, 2, 7, 4]
+ List after swapping:  [4, 1, 3, 2, 7]*/
 
 
 

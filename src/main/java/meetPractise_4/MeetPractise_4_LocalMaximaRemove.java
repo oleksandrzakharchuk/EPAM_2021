@@ -32,7 +32,7 @@ public class MeetPractise_4_LocalMaximaRemove {
 
     public static int[] removeLocalMax(int[] array) {
 
-        /*Создаю массив из чисел, которые не являются локальными максимумами. */
+        /*I create an array of numbers that are not local maxima. */
         List<Integer> locals = new ArrayList<Integer>();
         if (array[0] <= array[1]) {
             locals.add(array[0]);
@@ -53,3 +53,4 @@ public class MeetPractise_4_LocalMaximaRemove {
         return arr;
     }
 }
+/*[1, 3, 6, -5]*/

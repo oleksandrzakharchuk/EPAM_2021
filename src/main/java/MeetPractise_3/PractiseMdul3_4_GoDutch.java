@@ -28,9 +28,9 @@ public class PractiseMdul3_4_GoDutch {
         float d;
         float d1;
         Scanner in = new Scanner(System.in);
-        System.out.print("Общая сумма счета a=");
+        System.out.print("Total invoice amount a = ");
         float a = in.nextFloat();
-        System.out.print("Kоличество друзей b=");
+        System.out.print("Number of friends  b = ");
         float b = in.nextFloat();
 
         if (a < 0) {
@@ -42,7 +42,10 @@ public class PractiseMdul3_4_GoDutch {
             d = (a / b);
             d1 = d+(d * 100 / a);
 
-            System.out.println("Pазмер части оплаты для каждого из " + b + " друзей составляет : " + d1 + "$");
+            System.out.println("The size of the payment part for each of the  " + b + " friends makes up :  " + d1 + " $ ");
         }
     }
 }
+/*Total invoice amount a = 1000
+Number of friends  b = 5
+The size of the payment part for each of the  5.0 friends makes up :  220.0 $ */
