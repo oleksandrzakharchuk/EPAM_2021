@@ -33,7 +33,35 @@ public class MeetPractise_4_MatricesMultiplication {
 //creating two matrices
         /*int a[][]={{1,1,1},{2,2,2},{3,3,3}};
         int b[][]={{1,1,1},{2,2,2},{3,3,3}};*/
-        int a[][]={{1,2,3},{4,5,6}};
+        double a[][]={{0,12345},{4509,0},{3,567}};
+        double b[][]={{653,8,25353},{0,61,6}};
+///creating another matrix to store the multiplication of two matrices
+        int c[][]=new int[3][3];  //2 rows and 3 columns
+
+//multiplying and printing multiplication of 2 matrices
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++){
+                c[i][j]=0;
+                for(int k=0;k<2;k++)
+                {
+                    c[i][j]+=a[i][k]*b[k][j];
+                }//end of k loop
+                System.out.print(c[i][j]+" ");  //printing matrix element
+            }//end of j loop
+            System.out.println();//new line
+        }
+    }
+}
+/*   0    753045 74070
+  2944377 36072  114316677
+  1959    34611  79461     */
+
+/*
+public class MultiplyMatrix {
+    public static int[][] multiply(int[][] matrix1, int[][] matrix2) {
+
+        // Put your code here
+         int a[][]={{1,2,3},{4,5,6}};
         int b[][]={{7,8},{9,10},{11,12}};
 //creating another matrix to store the multiplication of two matrices
         int c[][]=new int[2][3];  //2 rows and 3 columns
@@ -50,7 +78,5 @@ public class MeetPractise_4_MatricesMultiplication {
             }//end of j loop
             System.out.println();//new line
         }
-    }}
-
-//58 64
-//139 154
+    }
+    }*/
