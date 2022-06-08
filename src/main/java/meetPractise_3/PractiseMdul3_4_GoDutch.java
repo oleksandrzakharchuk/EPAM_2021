@@ -1,4 +1,4 @@
-package MeetPractise_3;
+package meetPractise_3;
 
 import java.util.Scanner;
 

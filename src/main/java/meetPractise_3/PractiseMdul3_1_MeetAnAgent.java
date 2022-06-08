@@ -1,4 +1,4 @@
-package MeetPractise_3;//Задание 1 "Meet an Agent"
+package meetPractise_3;//Задание 1 "Meet an Agent"
 //Описание
 //Перейдите в класс MeetAnAgent и напишите программу, которая:
 //

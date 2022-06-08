@@ -1,4 +1,4 @@
-package MeetPractise_3;
+package meetPractise_3;
 //Перейдите в класс PizzaSplit и напишите программу, которая должна прочитать два значения из System.in:
 //
 //количество людей
