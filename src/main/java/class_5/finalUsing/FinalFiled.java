@@ -7,7 +7,6 @@ public class FinalFiled {
 
     final StringBuilder builder = new  StringBuilder();
     // final !=const;
-
     private int x;
     private String name;
     //при присваивании x нужно проверять это значение на привышение этого значения. Если меньше MAX_RANGE - значение x будет присвоино, если больше то будет генерация исключения ...
