@@ -74,6 +74,7 @@ class Segment {
         int y = m1 * x + b1;  // or m2 * x + b2
         //double x = 5; // Это просто пример, чтоб компилятор не ругался
         //double y = 25;
+
         // И верните точку с этими координатами
         return new Point(x, y);
 

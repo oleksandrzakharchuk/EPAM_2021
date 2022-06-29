@@ -6,7 +6,7 @@
 
 [ssh to gitLub](https://www.youtube.com/watch?v=_Yod5uX-GqY)
 
-
+[java в примерах](http://uchcom7.botik.ru/L/prog/java/java_v_primerakh.pdf)
 
 
 
