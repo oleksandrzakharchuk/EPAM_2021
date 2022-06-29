@@ -17,11 +17,9 @@ import java.util.Scanner;
 import static org.testng.AssertJUnit.assertEquals;
 
 public class LineIntersection_1 {
-    /* public static void main(String[] args) {
-         Line line1 = new Line(1, 1);
-         Line line2 = new Line(-1, 3);
 
-         System.out.println(line1.intersection(line2));*/
+    //Line line1 = new Line(1, 1);
+    // Line line2 = new Line(-1, 3);
 
     public static void main(String[] args) {
         System.out.println("Point of intersection of two lines : " + Arrays.toString(calculateIntersection()));

@@ -26,7 +26,11 @@ class Main1 {
             System.out.println(area);
         }*/
         {
-            Point centroid = new Triangle(new Point1(0, 0), new Point1(3, 0), new Point1(0, 3)).centroid();
+            Point centroid = new Triangle(
+                    new Point1(0, 0),
+                    new Point1(3, 0),
+                    new Point1(0, 3))
+                    .centroid();
 
             System.out.println(centroid.getX());
             System.out.println(centroid.getY());
