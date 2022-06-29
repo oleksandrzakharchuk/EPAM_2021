@@ -39,9 +39,8 @@ class Point {
 }
 
 class Segment {
-
-    private Point start;
-    private Point end;
+    Point start;
+    Point end;
 
 
     public Segment(Point start, Point end) {
@@ -53,7 +52,7 @@ class Segment {
         this.end = end;
     }
 
-    int length() {
+    double length() {
         int xDistanceSquare = (int) Math.pow(start.getX() - end.getX(), 2);
         int yDistanceSquare = (int) Math.pow(start.getY() - end.getY(), 2);
         return (int) Math.sqrt(xDistanceSquare + yDistanceSquare);
@@ -63,19 +62,16 @@ class Segment {
         return new Point((start.getX() + end.getX()) / 2,
                 (start.getY() + end.getY()) / 2);
     }
+
     Point intersection(Segment another) {
 
-        int m1 = 1 ;
+        int m1 = 1;
         int m2 = 2;
         int b1 = -1;
         int b2 = 3;
 
-        int x = (b2 - b1)/(m1 - m2);
+        int x = (b2 - b1) / (m1 - m2);
         int y = m1 * x + b1;  // or m2 * x + b2
-        //double x = 5; // Это просто пример, чтоб компилятор не ругался
-        //double y = 25;
-
-        // И верните точку с этими координатами
         return new Point(x, y);
 
     }
@@ -88,7 +84,7 @@ class Main11 {
 
         {
             double length = new Segment(new Point(0, 0), new Point(3, 4)).length();
-            System.out.println("length : " +length);
+            System.out.println("length : " + length);
         }
 
         {
@@ -97,7 +93,7 @@ class Main11 {
             Point intersection = first.intersection(second);
 
             System.out.println("getX()= " + intersection.getX());
-            System.out.println("getY() = " +intersection.getY());
+            System.out.println("getY() = " + intersection.getY());
         }
         Segment sequent = new Segment(new Point(2, 0), new Point(0, 2));
         Point midpoint = sequent.middle();
@@ -110,7 +106,7 @@ class Main11 {
             Segment second = new Segment(new Point(2, 1), new Point(1, 2));
             Point intersection = first.intersection(second);
 
-            System.out.println( intersection == null);
+            System.out.println(intersection == null);
 
         }
     }

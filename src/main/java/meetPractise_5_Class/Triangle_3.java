@@ -51,6 +51,13 @@ class Point22 {
         this.x = x;
         this.y = y;
     }
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
 }
 
 class Triangle {
@@ -59,8 +66,8 @@ class Triangle {
      * formula 1:
      * Java method to return area of triangle using vertices as per following * formula area = (Ax(By -Cy) + Bx(Cy -Ay) + Cx(Ay - By))/2 * * @return
      */
-    public static float area(Point22 A, Point22 B, Point22 C) {
-        float area = (A.x * (B.y - C.y) + B.x * (C.y - A.y) + C.x * (A.y - B.y)) / 2.0f;
+    public static double area(Point22 A, Point22 B, Point22 C) {
+        double area = (A.x * (B.y - C.y) + B.x * (C.y - A.y) + C.x * (A.y - B.y)) / 2.0f;
         return Math.abs(area);
     }
 
@@ -68,7 +75,7 @@ class Triangle {
      * formula 3:
      * * @(A.x + B.x + C.x) / 3.0
      */
-    public static float centroid(Point22 A, Point22 B, Point22 C) {
+    public static double centroid(Point22 A, Point22 B, Point22 C) {
         double CX1 = (A.x + B.x + C.x) / 3.0f;
         double CY1 = (A.y + B.y + C.y) / 3.0f;
         System.out.println("Point centroid() (X1,Y1) = (" + CX1 + "," + CY1 + ")");
