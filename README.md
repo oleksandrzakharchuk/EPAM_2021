@@ -8,5 +8,7 @@
 
 [java в примерах](http://uchcom7.botik.ru/L/prog/java/java_v_primerakh.pdf)
 
-
+[![Access control](img.png)]
+[](![public class Car](public class Car.png "public class Car"))
+[](![public static int numOfCar](img_2.png))
 
