@@ -19,144 +19,109 @@ package meetPractise_5_Class;
 //int next() – возвращает текущее значение текущего элемента, затем уменьшает текущий элемент на единицу и переключается на следующий элемент в порядке добавления. Пропускает нулевые элементы. Когда больше нет элементов для уменьшения, возвращает -1.
 //boolean isFinished() – когда больше нет элементов для уменьшения, возвращает true. В противном случае возвращает false.
 
-public class DecrementingCarousel_4 {
-    static int capacity;
-    int counter = 0;
-    //static List <Integer> elements = new ArrayList<>();
-    static int [] arr ;
+import java.util.Arrays;
+
+public class DecrementingCarousel {
+    int capacity;
+    static int[] elements;
+    int size = 0;
+    boolean called;
 
 
-    public DecrementingCarousel_4(int capacity) {
-        DecrementingCarousel_4.capacity = capacity;
-        arr = new int[capacity];
+    public DecrementingCarousel(int capacity) {
+        this.capacity = capacity;
+        elements = new int[capacity];
 
     }
 
-    public boolean addElement(int element){
-        if (counter < capacity && element > 0) {
-            arr[counter] = element;
-            counter++;
-            return true;
+    public boolean addElement(int element) {
+        if (element <= 0 || elements.length == size) {
+            return false;
         }
-        return false;
-
+        elements[size++] = element;
+        return true;
     }
-    public CarouselRun run(){
-        return new CarouselRun();
+
+
+    public CarouselRun run() {
+        if (!called) {
+            elements = Arrays.copyOf(elements, size);
+            called = true;
+            return new CarouselRun();
+        } else {
+            return null;
+        }
     }
-}
- class CarouselRun {
-     int position = 0;
-     int number = 0;
 
+    public class CarouselRun {
+        int count = 0;
+        int[] array = DecrementingCarousel.elements;
 
-     public int next() {
-         int count = 0;
-         double[] arr = new double[0];
-         while (count < arr.length && arr[position %= arr.length] <= 0) {
-             position++;
-             count++;
-         }
-         if (count == arr.length) return -1;
-         return (int) arr[position++]--;
-     }
+        public int next() {
 
+            if (array.length == 0) {
+                return -1;
+            }
 
+            if (count == array.length) {
+                count = 0;
+            }
 
+            while (array[count] == 0) {
+                count++;
 
-        /*int[] arr = new int[0];
-        if (allNegative(arr)) return -1;
-
-        int capacity = 0;
-        if (position >= capacity) position = 0;
-
-        if (arr[position] <= 0) {
-            if (position == arr.length - 1) {
-                position = 0;
-                if (arr[position] == 0) {
-                    return arr[++position]--;
+                if (count > array.length - 1) {
+                    count = 0;
                 }
-                else {return arr[position++]--;}
-            }
-            else {
-                return arr[++position]--;
+
+                if (isFinished()) {
+                    return -1;
+                }
             }
 
-        }
-        return arr[position++]--;
-*/
-        /*int count = 0;
-        double[] arr = new double[0];
-        while (count < arr.length && arr[position %= arr.length] <= 0) {
-            position++;
+            for (int i = 1; i < array.length; i++) {
+                if (array[i] == -1) {
+                    break;
+                }
+            }
+
             count++;
-        }
-        if (count == arr.length) return -1;
-        return (int) arr[position++]--;*/
-
-
-
-    public static int[] removeTheElement(int[] arr, int index)
-    {
-
-        // If the array is empty
-        // or the index is not in array range
-        // return the original array
-        if (arr == null || index < 0
-                || index >= arr.length) {
-
-            return arr;
+            action(count - 1);
+            return array[count - 1] + 1;
         }
 
-        // Create another array of size one less
-        int[] anotherArray = new int[arr.length - 1];
-
-        // Copy the elements except the index
-        // from original array to the other array
-        for (int i = 0, k = 0; i < arr.length; i++) {
-
-            // if the index is
-            // the removal element index
-            if (i == index) {
-                continue;
+        public boolean isFinished() {
+            int sum = 0;
+            for (int i = 0; i < array.length; i++) {
+                sum += array[i];
             }
 
-            // if the index is not
-            // the removal element index
-            anotherArray[k++] = arr[i];
+            return sum == 0;
         }
 
-        // return the resultant array
-        return anotherArray;
+        public void action(int index) {
+            array[index]--;
+        }
+    }
+    public static class HalvingCarousel extends DecrementingCarousel {
+
+        public HalvingCarousel(final int capacity) {
+            super(capacity);
+            System.out.println("integer division, discarding the remainder capacity/2 = " + capacity / 2);
+
+        }
+
     }
 
-    public static boolean allNegative (int arr[]) {
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > 0) return false;
-        }
-        return true;
-    }
-     public boolean isFinished() {
-         int[] arr = new int[0];
-         for (int var: arr) {
-             if (var > 0) return false;
-         }
-         return true;
 
-     }
- }
-    /*public boolean isFinished() {
-        int[] arr = new int[0];
-        for (int var: arr) {
-            if (var > 0) return false;
-        }
-        return true;
+    static class Main {
+        public static void main(String args[]) {
+           // CarouselRun run = new  HalvingCarousel(7).run();
+           // System.out.println(run.isFinished()); //true
+           // System.out.println(run.next()); //-1
 
-    }*/
 
-class Main {
-    public static void main (String args[]) {
-            DecrementingCarousel_4 carousel = new DecrementingCarousel_4(7);
+       /*    DecrementingCarousel carousel = new HalvingCarousel(7);
 
             carousel.addElement(2);
             carousel.addElement(3);
@@ -176,11 +141,57 @@ class Main {
             System.out.println(run.next()); //1
 
             System.out.println(run.isFinished()); //true
-            System.out.println(run.next()); //-1
+            System.out.println(run.next()); //-1*/
 
+        /*    DecrementingCarousel carousel = new DecrementingCarousel(3);
 
+            System.out.println(carousel.addElement(-2)); //false
+            System.out.println(carousel.addElement(0)); //false
+
+            System.out.println(carousel.addElement(2)); //true
+            System.out.println(carousel.addElement(3)); //true
+            System.out.println(carousel.addElement(1)); //true
+
+            //carousel is full
+            System.out.println(carousel.addElement(2)); //false
+
+            CarouselRun run = carousel.run();
+
+            System.out.println(run.next()); //2
+            System.out.println(run.next()); //3
+            System.out.println(run.next()); //1
+
+            System.out.println(run.next()); //1
+            System.out.println(run.next()); //2
+
+            System.out.println(run.next()); //1
+
+            System.out.println(run.isFinished()); //true
+            System.out.println(run.next()); //-1*/
+
+            //Refusing to add more elements after "run" was called:
+
+       /*     DecrementingCarousel carousel = new DecrementingCarousel(10);
+
+            System.out.println(carousel.addElement(2)); //true
+            System.out.println(carousel.addElement(3)); //true
+            System.out.println(carousel.addElement(1)); //true
+
+            carousel.run();
+
+            System.out.println(carousel.addElement(2)); //false
+            System.out.println(carousel.addElement(3)); //false
+            System.out.println(carousel.addElement(1)); //false*/
+
+            //Refusing to create more than one CarouselRun:
+
+            DecrementingCarousel carousel = new DecrementingCarousel(10);
+            System.out.println(carousel.run() == null); //false
+            System.out.println(carousel.run() == null); //true
         }
     }
+}
+
 
 
 
