@@ -19,3 +19,4 @@
 [](![img_5.png](img_5.png))
 [](https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html)
 [особенности описания и использования абстрактных классов и методов](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html)
+[Interfaces](https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html)
