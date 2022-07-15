@@ -20,3 +20,6 @@
 [](https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html)
 [особенности описания и использования абстрактных классов и методов](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html)
 [Interfaces](https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html)
+[Как же хранятся в памяти эти два объекта?](![img_6.png](img_6.png))
+[Глубокое копирование ](![img_7.png](img_7.png))
+[представить хранение объектов в памяти](![img_8.png](img_8.png))
